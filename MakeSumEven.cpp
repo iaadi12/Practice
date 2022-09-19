@@ -4,7 +4,7 @@ class Solution {
         int sum=0,n=arr.size()-1;
         int even=0,odd=0;
         if(n%2==0)
-        return false;
+           return false;
         for(int i=0; i<arr.size();i++)
         {
             if(arr[i]%2==0)
