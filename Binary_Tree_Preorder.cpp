@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<int>ans;
+    vector<int>ans;//Because funtion call itself many times so it return only one valur if ve define it indside function
     vector<int> preorderTraversal(TreeNode* root) {
         if(root==NULL){
             return {};
