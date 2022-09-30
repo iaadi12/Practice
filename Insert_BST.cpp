@@ -1,0 +1,16 @@
+Solution 1--->
+  
+  class Solution {
+public:
+    TreeNode* insertIntoBST(TreeNode* root, int val) {
+        if(!root) return new TreeNode(val);
+        if(root->val > val) root->left = insertIntoBST(root->left, val);
+        else root->right = insertIntoBST(root->right, val);
+        return root;
+    }
+};
+
+
+Solution 2--->
+  
+  
