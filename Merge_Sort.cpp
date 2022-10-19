@@ -65,6 +65,50 @@ class Solution
     delete []second;
 
 }
+//      void merge(int arr[], int l, int h)
+//     {
+//          // Your code here
+//          int mid=(l+h)/2;
+//          int len1=mid-l+1;
+//          int len2=h-mid;
+//          int *first=new int[len1];
+//          int *second=new int[len2];
+//          int mainArrayIndex=l;
+//          for(int i=0;i<len1;i++)
+//          {
+//              first[i]=arr[mainArrayIndex++];
+//          }
+//          mainArrayIndex=mid+1;
+//          for(int i=0;i<len1;i++)
+//          {
+//              second[i]=arr[mainArrayIndex++];
+//          }
+//          int index1=0;
+//          int index2=0;
+//          mainArrayIndex=s;
+//          while(index1<len1 && index2<len2)
+//          {
+//              if(first[index]<second[index])
+//              {
+//                  arr[mainArrayIndex++]=first[index++];
+//              }
+//              else
+//              {
+//                  arr[mainArrayIndex++]=second[index++];
+//              }
+//          }
+//          while(index1<len1 && index2<len2)
+//          {
+//              if(index1<len1)
+//              {
+//                  arr[mainArrayIndex++]=first[index++];
+//              }
+//              else
+//              {
+//                  arr[mainArrayIndex++]=first[index++];
+//              }
+//          }
+//     }
 
 // void mergeSort(int *arr, int s, int e) {
 
