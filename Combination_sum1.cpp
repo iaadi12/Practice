@@ -11,10 +11,12 @@ class Solution {
         }
         if(arr[ind]<=target)
         {
+            //pick the element
             ds.push_back(arr[ind]);
             findCombinations(ind, target-arr[ind], arr, ans, ds);
             ds.pop_back();
         }
+        //do not pick the element
         findCombinations(ind+1, target, arr, ans, ds);
     }
 public:
