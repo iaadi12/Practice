@@ -9,8 +9,10 @@ class Solution {
         for(int i=ind;i<arr.size();i++){
             if(i>ind && arr[i]==arr[i-1])continue;
             if(arr[i]>target)break;
+            //pick the element
             ds.push_back(arr[i]);
             findCombinations(i+1, target-arr[i], arr, ans, ds);
+            //do not pick the element
             ds.pop_back();
         }
 }
