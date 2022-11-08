@@ -1,16 +1,37 @@
-class Solution {
-public:
-    bool containsDuplicate(vector<int>& nums) {
-        int n=nums.size(),count=0;
-        sort(nums.begin(),nums.end());
-        for(int i=1;i<n;i++)
-        {
-           if(nums[i]==nums[i-1])
-               count++;
+//{ Driver Code Starts
+//Initial Template for Java
+import java.util.*;
+import java.io.*;
+class GFG {
+    public static void main(String args[]) throws IOException {
+        BufferedReader read =
+            new BufferedReader(new InputStreamReader(System.in));
+        int t = Integer.parseInt(read.readLine());
+        while (t-- > 0) {
+            int n = Integer.parseInt(read.readLine());
+            Solution ob = new Solution();
+
+            System.out.println(ob.armstrongNumber(n));
         }
-        if(count>=1)
-            return true;
-        else
-            return false;
     }
-};
+}
+// } Driver Code Ends
+
+
+//User function Template for Java
+class Solution {
+    static String armstrongNumber(int n){
+        // code here
+        long  rem, sum=0, temp;
+        temp = n;
+        while(n > 0)
+        {
+            rem = n % 10;
+            sum = sum + (rem * rem * rem);
+            n = n / 10;
+        }
+        if(temp==sum)
+            return "Yes";
+        else return "No";
+    }
+}
