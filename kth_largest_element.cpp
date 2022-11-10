@@ -31,7 +31,7 @@ public:
     for(auto x:nums)
     {
       pq.push(x);
-      if(pq.size()<k)
+      if(pq.size()>k)
         pq.pop();
     }
       
